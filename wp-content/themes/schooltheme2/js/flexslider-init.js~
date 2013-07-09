@@ -1,0 +1,9 @@
+(function($) {
+    $(window).load(function() {
+    alert("ok");
+        $('.flexslider').flexslider({
+	            animation: 'slide',
+		    controlsContainer: '.flex-container'
+	    });
+    });
+})(jQuery)
