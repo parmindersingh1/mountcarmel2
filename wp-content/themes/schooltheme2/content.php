@@ -14,6 +14,8 @@
 			<?php _e( 'Featured post', 'twentytwelve' ); ?>
 		</div>
 		<?php endif; ?>
+              
+      <div class="intro-wrap">
 		<header class="entry-header">
 			<?php the_post_thumbnail(); ?>
 			<?php if ( is_single() ) : ?>
@@ -29,6 +31,8 @@
 				</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
 		</header><!-- .entry-header -->
+</div><!-- intro-wrap -->
+
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 		<div class="entry-summary">

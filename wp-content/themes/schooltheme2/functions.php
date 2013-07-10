@@ -246,6 +246,18 @@ if (function_exists('register_sidebar')) {
     	));
     }
 
+if (function_exists('register_sidebar')) {
+    	register_sidebar(array(
+    		'name' => 'footer Widgets',
+    		'id'   => 'footer-widgets',
+    		'description'   => 'Widget Area',
+    		'before_widget' => '<div id="footer_list" class="footer_listdiv">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h2>',
+    		'after_title'   => '</h2>'
+    	));
+    }
+
 if ( ! function_exists( 'twentytwelve_content_nav' ) ) :
 /**
  * Displays navigation to next/previous pages when applicable.
