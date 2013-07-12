@@ -515,3 +515,6 @@ function my_add_styles() {
     wp_enqueue_style('flexslider', get_template_directory_uri() .'css/flexslider.css');
 }
 add_action('wp_enqueue_scripts', 'my_add_styles');
+
+ // Add the Gallery Custom Post Type
+    include("functions/mytheme-post-types.php");

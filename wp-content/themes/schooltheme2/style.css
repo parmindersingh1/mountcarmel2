@@ -582,8 +582,8 @@ section[role="banner"] {
 	word-wrap: break-word;
 } */
 .widget-area .widget h3 {
-	margin-bottom: 24px;
-	margin-bottom: 1.714285714rem;
+	margin-top: 24px;
+	margin-top: 1.714285714rem;
 }
 .widget-area .widget p,
 .widget-area .widget li,
@@ -2060,18 +2060,18 @@ h1 {
   margin: 0 0 1.5em;
 }
 
-.streamer .upcoming {
+.streamer .hfeed {
     background: url("images/bg-streamer-4.gif") repeat-y scroll 0 0 rgba(243, 243, 241, 0.698);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
     float: left;
     margin-bottom: 0;
 }
-.streamer .upcoming {
+.streamer .hfeed {
     background-color: #FBFBFB;
     display: table-cell;
     width: 856px;
 }
-.streamer .upcoming li {
+.streamer .hfeed li {
     border-top: 1px solid #C3C3C3;
     float: left;
     height: 99px;
@@ -2080,28 +2080,28 @@ h1 {
     width: 180px;
     font-size: 1.2em;
 }
-.streamer .event {
+.streamer .entry-title {
     font: bold 1.68em/1.38 Helvetica,Arial,sans-serif;
     margin-bottom: 3px;
 }
-.streamer .event a {
+.streamer .entry-title a {
     color: #293352;
     text-decoration: none;
 }
-.streamer .event a:hover, .streamer .event a:focus {
+.streamer .entry-title a:hover, .streamer .entry-title a:focus {
     text-decoration: underline;
 }
-.upcoming {
+.hfeed {
     list-style-type: none;
 }
-.dig-in {
+.tribe-events-widget-link {
  display: none;
 }
 
 .streamer .view-hedu-homepage-events .data {
     color: #6C6C6C;
 }
-.streamer .when {
+.streamer .duration {
     font-size: 1.2em;
     font-weight: normal;
     line-height: 1.4;
@@ -2330,8 +2330,7 @@ h1 {
    min-height: 500px;
 }
 
-#secondary a {
-    background: none repeat scroll 0 0 #FFFFFF;
+#secondary a {   
     color: #6C6C6C;
     display: block;
     font-weight: bold;
@@ -2345,7 +2344,9 @@ h1 {
 }
 
 #secondary li {
-    width:223px;
+     padding: 0 24px;
+     width: 175px;
+     border-bottom: 1px solid #FFFFFF;
 }
 #secondary li a.active {
      background: none repeat scroll 0 0 #63212B;
@@ -2353,4 +2354,84 @@ h1 {
 }
 #secondary a:hover.active, #secondary a:focus.active {
     text-decoration: underline;
+}
+#secondary h3 {
+    padding: 8px 38px;
+    background: none repeat scroll 0 0 #63212B;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.duration .date-start {
+ 
+}
+.tribe-events-list-widget ol li {
+ margin-bottom: 10px;
+}
+        #menu-sidebar .current-menu-item, 
+	#menu-sidebar .current-menu-ancestor,
+	#menu-sidebar .current_page_item,
+	#menu-sidebar .current_page_ancestor  {		
+		 background: none repeat scroll 0 0 #63212B;
+                 color: #FFFFFF;
+	}
+
+	#menu-sidebar .current-menu-item > a,
+	#menu-sidebar .current-menu-ancestor > a,
+	#menu-sidebar .current_page_item > a,
+	#menu-sidebar .current_page_ancestor > a {
+           color: #FFFFFF;
+      }
+#secondary .date-start {
+ margin-left: 13px;
+} 
+.tribe-events-list .vevent.hentry h2 {
+  font-size: 2em;
+}
+
+/* gallery */
+
+.gallery-block img {
+    height: 160px;
+    width: 211px;
+    border-bottom: 1px solid #724728;
+}
+
+.gallery-block {
+     background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #724728;
+    box-shadow: 0 0 5px #724728;
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 7px;
+    margin-right: 7px;
+    width: 31%;
+}
+
+.gallery-block a {
+  text-decoration:none;
+}
+
+#gallery-link {      
+    color: #800000;
+    height: 25px;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    width: 195px;
+    font-size: 1.6em;
+}
+
+
+#primary_gallery {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BFCBD7;
+    float: right;
+    min-height: 400px;
+    width: 667px;
+    padding-bottom: 32767px;
+    margin-bottom: -32767px;
+}
+.gallery-hero {
+  height: 200px;
+  width: 200px;
 }

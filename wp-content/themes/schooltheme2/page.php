@@ -14,10 +14,26 @@
 
 get_header(); ?>
 
+              <div class="intro-wrap">
+		
+                        <div id="skip" class="wrap intro" role="main">
+			<h1><?php the_title(); ?></h1>
+                       </div>		
+ 
+             </div><!--intro-wrap -->
 
+		<div id="primary-content" class="site-content wrap">
+                    
+                      <div id="page-content" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>				
 			<?php endwhile; // end of the loop. ?>
+                    
+                     </div><!-- #page-content -->
+                  
+                 <?php get_sidebar(); ?>
+		</div><!-- .site-content -->
+		
 
 
 

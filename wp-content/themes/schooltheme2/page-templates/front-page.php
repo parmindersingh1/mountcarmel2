@@ -73,7 +73,7 @@ get_header(); ?>
 			<strong>Events</strong>
 			</h2>
 			<p class="more">
-			<a href="/events">More events</a>
+			<a href="/harvard?post_type=tribe_events&eventDisplay=month">More events</a>
 			</p>
 		      </div><!-- heading -->
                      <div id="Events_div">

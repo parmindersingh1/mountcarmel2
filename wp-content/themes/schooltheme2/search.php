@@ -9,14 +9,22 @@
 
 get_header(); ?>
 
-	<section id="primary" class="site-content">
-		<div id="content" role="main">
+ <div class="intro-wrap">
+		
+                       <div id="skip" class="wrap intro" role="main">
+			<h1></h1>
+                       </div>		
+ 
+             </div><!--intro-wrap -->
 
+		<div id="primary-content" class="site-content wrap">
+                    
+                      <div id="page-content" role="main">
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header>
+			<div id="main-title" >
+				<h2 class="entry-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+			</div>
 
 			<?php twentytwelve_content_nav( 'nav-above' ); ?>
 
@@ -28,24 +36,23 @@ get_header(); ?>
 			<?php twentytwelve_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
-
-			<article id="post-0" class="post no-results not-found">
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
-				</header>
+			
+				<div id="main-title" >
+				<h2 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h2>
+				</div>
 
 				<div class="entry-content">
 					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentytwelve' ); ?></p>
 					<?php get_search_form(); ?>
 				</div><!-- .entry-content -->
-			</article><!-- #post-0 -->
+			
 
 		<?php endif; ?>
 
-		</div><!-- #content -->
-	</section><!-- #primary -->
+	    </div><!-- #content -->
+                 <?php get_sidebar(); ?>
+		</div><!-- .site-content -->
 
-<?php get_sidebar(); ?>
 </div><!-- #main .wrapper -->
 </div><!-- #page -->
 <?php get_footer(); ?>
