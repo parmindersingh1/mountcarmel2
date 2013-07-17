@@ -17,6 +17,8 @@
 get_header(); ?>
 
 	
+
+             <?php query_posts(array('category_name' => 'News')); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -34,7 +36,7 @@ get_header(); ?>
 
 		<div id="primary-content" class="site-content wrap">
 			 <div id="page-content" role="main">
-
+                             
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>

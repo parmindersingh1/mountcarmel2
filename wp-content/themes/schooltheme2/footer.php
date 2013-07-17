@@ -28,7 +28,9 @@
 		<li class="last"><a onclick="_gaq.push(['_trackEvent', 'Footer', 'OffsiteClick', 'Community', 2]);" class="last" href="http://community.harvard.edu/">HarvardInTheCommunity</a></li>
   </ul>
 
-          </div>
+
+</div>
+      
        </div>
 
 

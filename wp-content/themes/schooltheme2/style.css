@@ -1897,7 +1897,7 @@ text-indent: -9999px;
 }
 
 .slider-image {
-  height: 290px;
+  height: 348px;
     right: 0;
  }
 .slider-image img {
@@ -1909,7 +1909,7 @@ text-indent: -9999px;
     background-position: left top;
     background-repeat: no-repeat;
     float: left;
-    min-height: 222px;
+    min-height: 280px;
     padding: 68px 40px 0;
     position: relative;
     width: 376px;
@@ -2431,7 +2431,21 @@ h1 {
     padding-bottom: 32767px;
     margin-bottom: -32767px;
 }
+
 .gallery-hero {
   height: 200px;
   width: 200px;
+}
+
+#twitter_like {    
+    margin-top: 42px;
+    position: absolute;
+    right: -32px;
+    width: 250px;
+}
+
+#fb_likebutton {
+    margin-top: 35px;
+    position: absolute;
+    width: 250px;
 }

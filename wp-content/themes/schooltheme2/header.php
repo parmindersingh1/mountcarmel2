@@ -32,6 +32,25 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="fb_likebutton">
+<div class="fb-like" data-href="https://www.facebook.com/mcschool123" data-send="false" data-width="160" data-layout="count" data-show-faces="false"></div>
+</div>
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <div id="twitter_like">
+           <a href="https://twitter.com/SatlujSchool" class="twitter-follow-button" data-dnt="true">Follow @twitterapi</a>
+  </div>
+
+
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
            <div class="wrap">

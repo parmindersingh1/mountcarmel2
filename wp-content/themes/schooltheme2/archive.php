@@ -19,12 +19,20 @@
 
 get_header(); ?>
 
-	<section id="primary" class="site-content">
-		<div id="content" role="main">
+          <div class="intro-wrap">
+		
+                        <div id="skip" class="wrap intro" role="main">
+			<h1><?php the_title(); ?></h1>
+                       </div>		
+ 
+             </div><!--intro-wrap -->
+
+	<div id="primary-content" class="site-content wrap">                    
+                      <div id="page-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
-			<header class="archive-header">
-				<h1 class="archive-title"><?php
+			<div id="main-title" >
+				<h2 class="entry-title">><?php
 					if ( is_day() ) :
 						printf( __( 'Daily Archives: %s', 'twentytwelve' ), '<span>' . get_the_date() . '</span>' );
 					elseif ( is_month() ) :
@@ -34,8 +42,8 @@ get_header(); ?>
 					else :
 						_e( 'Archives', 'twentytwelve' );
 					endif;
-				?></h1>
-			</header><!-- .archive-header -->
+				?></h2>
+			</div>
 
 			<?php
 			/* Start the Loop */
@@ -56,10 +64,8 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
 
-		</div><!-- #content -->
-	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
-</div><!-- #main .wrapper -->
+		 </div><!-- #content -->
+                <?php get_sidebar(); ?>
+		</div><!-- .site-content --></div><!-- #main .wrapper -->
 </div><!-- #page -->
 <?php get_footer(); ?>

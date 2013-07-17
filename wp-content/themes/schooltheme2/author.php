@@ -13,8 +13,17 @@
 
 get_header(); ?>
 
-	<section id="primary" class="site-content">
-		<div id="content" role="main">
+	<div class="intro-wrap">
+		
+                        <div id="skip" class="wrap intro" role="main">
+			<h1><?php the_title(); ?></h1>
+                       </div>		
+ 
+             </div><!--intro-wrap -->
+
+		<div id="primary-content" class="site-content wrap">
+                    
+                      <div id="page-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -28,11 +37,10 @@ get_header(); ?>
 				the_post();
 			?>
 
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Author Archives: %s', 'twentytwelve' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
-			</header><!-- .archive-header -->
+			<div id="main-title" >
+				<h2 class="entry-title"><?php printf( __( 'Author Archives: %s', 'twentytwelve' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h2>
+				</div>
 
-			<?php
 				/* Since we called the_post() above, we need to
 				 * rewind the loop back to the beginning that way
 				 * we can run the loop properly, in full.
@@ -68,9 +76,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</div><!-- #content -->
-	</section><!-- #primary -->
+                <?php get_sidebar(); ?>
+		</div><!-- .site-content -->
 
-<?php get_sidebar(); ?>
 </div><!-- #main .wrapper -->
 </div><!-- #page -->
 <?php get_footer(); ?>

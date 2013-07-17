@@ -11,15 +11,24 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
+	<div class="intro-wrap">
+		
+                        <div id="skip" class="wrap intro" role="main">
+			<h1><?php the_title(); ?></h1>
+                       </div>		
+ 
+             </div><!--intro-wrap -->
+
+		<div id="primary-content" class="site-content wrap">
+                    
+                      <div id="page-content" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class( 'image-attachment' ); ?>>
-					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-
+				
+					<div id="main-title" >
+				<h2 class="entry-title"><?php the_title(); ?></h2>
+                                       </div>
 						<footer class="entry-meta">
 							<?php
 								$metadata = wp_get_attachment_metadata();
@@ -41,7 +50,7 @@ get_header(); ?>
 							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'twentytwelve' ) ); ?></span>
 							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'twentytwelve' ) ); ?></span>
 						</nav><!-- #image-navigation -->
-					</header><!-- .entry-header -->
+					
 
 					<div class="entry-content">
 
@@ -94,14 +103,17 @@ endif;
 
 					</div><!-- .entry-content -->
 
-				</article><!-- #post -->
+			
 
 				<?php comments_template(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+		
+                      </div><!-- #content -->
+                <?php get_sidebar(); ?>
+		</div><!-- .site-content -->
+		
 </div><!-- #main .wrapper -->
 </div><!-- #page -->
 <?php get_footer(); ?>

@@ -27,7 +27,7 @@ get_header(); ?>
 
 
                        <div id="gallery_single" >                                                               
-                                  <?php echo do_shortcode("[gallery]"); ?>
+                                  <?php echo do_shortcode("[gallery link='file']"); ?>
                                 </div><!-- #gallery_single -->
   
 

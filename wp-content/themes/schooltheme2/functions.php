@@ -518,3 +518,4 @@ add_action('wp_enqueue_scripts', 'my_add_styles');
 
  // Add the Gallery Custom Post Type
     include("functions/mytheme-post-types.php");
+
